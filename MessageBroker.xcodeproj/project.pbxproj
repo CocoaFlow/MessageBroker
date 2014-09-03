@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		DA1B71CF19B6B03D00933BAF /* MessageBroker.h in Headers */ = {isa = PBXBuildFile; fileRef = DA1B71CE19B6B03D00933BAF /* MessageBroker.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DA1B71D919B6B03E00933BAF /* MessageBrokerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1B71D819B6B03E00933BAF /* MessageBrokerTests.swift */; };
 		DA6710F219B6C23600A4B369 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA6710EB19B6C22200A4B369 /* Nimble.framework */; };
 		DA6710F319B6C23600A4B369 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA6710DC19B6C20900A4B369 /* Quick.framework */; };
 		DA6710F419B6C24100A4B369 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA6710EF19B6C22200A4B369 /* Nimble.framework */; };
@@ -124,7 +123,6 @@
 		DA1B71CE19B6B03D00933BAF /* MessageBroker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageBroker.h; sourceTree = "<group>"; };
 		DA1B71D419B6B03E00933BAF /* MessageBroker-MacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MessageBroker-MacTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA1B71D719B6B03E00933BAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DA1B71D819B6B03E00933BAF /* MessageBrokerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageBrokerTests.swift; sourceTree = "<group>"; };
 		DA1B71E919B6B27400933BAF /* MessageBroker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MessageBroker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA1B71F319B6B27400933BAF /* MessageBroker-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MessageBroker-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA6710D319B6C20900A4B369 /* Quick.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Quick.xcodeproj; path = External/Quick/Quick/Quick.xcodeproj; sourceTree = SOURCE_ROOT; };
@@ -213,7 +211,6 @@
 			children = (
 				DA6710E319B6C22200A4B369 /* Nimble.xcodeproj */,
 				DA6710D319B6C20900A4B369 /* Quick.xcodeproj */,
-				DA1B71D819B6B03E00933BAF /* MessageBrokerTests.swift */,
 				DA1B71D619B6B03E00933BAF /* Supporting Files */,
 			);
 			path = MessageBrokerTests;
@@ -540,7 +537,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA1B71D919B6B03E00933BAF /* MessageBrokerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
