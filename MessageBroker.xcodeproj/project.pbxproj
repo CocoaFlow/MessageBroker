@@ -14,6 +14,8 @@
 		DA6710F519B6C24100A4B369 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA6710DC19B6C20900A4B369 /* Quick.framework */; };
 		DA67110619B6C2EA00A4B369 /* MessageTransfer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA6710FF19B6C2DB00A4B369 /* MessageTransfer.framework */; };
 		DA67110719B6C2F700A4B369 /* MessageTransfer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA6710FF19B6C2DB00A4B369 /* MessageTransfer.framework */; };
+		DA67110919B6C33B00A4B369 /* MessageBroker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA67110819B6C33B00A4B369 /* MessageBroker.swift */; };
+		DA67110A19B6C33B00A4B369 /* MessageBroker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA67110819B6C33B00A4B369 /* MessageBroker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +130,7 @@
 		DA6710D319B6C20900A4B369 /* Quick.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Quick.xcodeproj; path = External/Quick/Quick/Quick.xcodeproj; sourceTree = SOURCE_ROOT; };
 		DA6710E319B6C22200A4B369 /* Nimble.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Nimble.xcodeproj; path = External/Nimble/Nimble.xcodeproj; sourceTree = SOURCE_ROOT; };
 		DA6710F619B6C2DB00A4B369 /* MessageTransfer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MessageTransfer.xcodeproj; path = External/MessageTransfer/MessageTransfer.xcodeproj; sourceTree = SOURCE_ROOT; };
+		DA67110819B6C33B00A4B369 /* MessageBroker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageBroker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +197,7 @@
 				DA6710F619B6C2DB00A4B369 /* MessageTransfer.xcodeproj */,
 				DA1B71CE19B6B03D00933BAF /* MessageBroker.h */,
 				DA1B71CC19B6B03D00933BAF /* Supporting Files */,
+				DA67110819B6C33B00A4B369 /* MessageBroker.swift */,
 			);
 			path = MessageBroker;
 			sourceTree = "<group>";
@@ -537,6 +541,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA67110919B6C33B00A4B369 /* MessageBroker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -551,6 +556,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA67110A19B6C33B00A4B369 /* MessageBroker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -654,6 +660,7 @@
 		DA1B71DD19B6B03E00933BAF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -665,12 +672,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = MessageBroker;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		DA1B71DE19B6B03E00933BAF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -688,6 +697,7 @@
 		DA1B71E019B6B03E00933BAF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
@@ -700,12 +710,14 @@
 				INFOPLIST_FILE = MessageBrokerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		DA1B71E119B6B03E00933BAF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
@@ -720,6 +732,7 @@
 		DA1B71FA19B6B27400933BAF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -736,6 +749,7 @@
 				PRODUCT_NAME = MessageBroker;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -743,6 +757,7 @@
 		DA1B71FB19B6B27400933BAF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -763,6 +778,7 @@
 		DA1B71FD19B6B27400933BAF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -776,12 +792,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		DA1B71FE19B6B27400933BAF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
