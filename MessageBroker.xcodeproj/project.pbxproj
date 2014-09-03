@@ -11,13 +11,32 @@
 		DA1B71D919B6B03E00933BAF /* MessageBrokerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1B71D819B6B03E00933BAF /* MessageBrokerTests.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		DA1B71E219B6B21200933BAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA1B71C019B6B03D00933BAF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DA1B71C819B6B03D00933BAF;
+			remoteInfo = "MessageBroker-Mac";
+		};
+		DA1B71FF19B6B2B200933BAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA1B71C019B6B03D00933BAF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DA1B71E819B6B27400933BAF;
+			remoteInfo = "MessageBroker-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		DA1B71C919B6B03D00933BAF /* MessageBroker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MessageBroker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA1B71CD19B6B03D00933BAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA1B71CE19B6B03D00933BAF /* MessageBroker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageBroker.h; sourceTree = "<group>"; };
-		DA1B71D419B6B03E00933BAF /* MessageBrokerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MessageBrokerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA1B71D419B6B03E00933BAF /* MessageBroker-MacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MessageBroker-MacTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA1B71D719B6B03E00933BAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA1B71D819B6B03E00933BAF /* MessageBrokerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageBrokerTests.swift; sourceTree = "<group>"; };
+		DA1B71E919B6B27400933BAF /* MessageBroker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MessageBroker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA1B71F319B6B27400933BAF /* MessageBroker-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MessageBroker-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +48,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		DA1B71D119B6B03E00933BAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA1B71E519B6B27400933BAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA1B71F019B6B27400933BAF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -51,7 +84,9 @@
 			isa = PBXGroup;
 			children = (
 				DA1B71C919B6B03D00933BAF /* MessageBroker.framework */,
-				DA1B71D419B6B03E00933BAF /* MessageBrokerTests.xctest */,
+				DA1B71D419B6B03E00933BAF /* MessageBroker-MacTests.xctest */,
+				DA1B71E919B6B27400933BAF /* MessageBroker.framework */,
+				DA1B71F319B6B27400933BAF /* MessageBroker-iOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,12 +136,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DA1B71E619B6B27400933BAF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		DA1B71C819B6B03D00933BAF /* MessageBroker */ = {
+		DA1B71C819B6B03D00933BAF /* MessageBroker-Mac */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DA1B71DC19B6B03E00933BAF /* Build configuration list for PBXNativeTarget "MessageBroker" */;
+			buildConfigurationList = DA1B71DC19B6B03E00933BAF /* Build configuration list for PBXNativeTarget "MessageBroker-Mac" */;
 			buildPhases = (
 				DA1B71C419B6B03D00933BAF /* Sources */,
 				DA1B71C519B6B03D00933BAF /* Frameworks */,
@@ -117,14 +159,14 @@
 			);
 			dependencies = (
 			);
-			name = MessageBroker;
+			name = "MessageBroker-Mac";
 			productName = MessageBroker;
 			productReference = DA1B71C919B6B03D00933BAF /* MessageBroker.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		DA1B71D319B6B03E00933BAF /* MessageBrokerTests */ = {
+		DA1B71D319B6B03E00933BAF /* MessageBroker-MacTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DA1B71DF19B6B03E00933BAF /* Build configuration list for PBXNativeTarget "MessageBrokerTests" */;
+			buildConfigurationList = DA1B71DF19B6B03E00933BAF /* Build configuration list for PBXNativeTarget "MessageBroker-MacTests" */;
 			buildPhases = (
 				DA1B71D019B6B03E00933BAF /* Sources */,
 				DA1B71D119B6B03E00933BAF /* Frameworks */,
@@ -133,10 +175,47 @@
 			buildRules = (
 			);
 			dependencies = (
+				DA1B71E319B6B21200933BAF /* PBXTargetDependency */,
 			);
-			name = MessageBrokerTests;
+			name = "MessageBroker-MacTests";
 			productName = MessageBrokerTests;
-			productReference = DA1B71D419B6B03E00933BAF /* MessageBrokerTests.xctest */;
+			productReference = DA1B71D419B6B03E00933BAF /* MessageBroker-MacTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DA1B71E819B6B27400933BAF /* MessageBroker-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA1B71F919B6B27400933BAF /* Build configuration list for PBXNativeTarget "MessageBroker-iOS" */;
+			buildPhases = (
+				DA1B71E419B6B27400933BAF /* Sources */,
+				DA1B71E519B6B27400933BAF /* Frameworks */,
+				DA1B71E619B6B27400933BAF /* Headers */,
+				DA1B71E719B6B27400933BAF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MessageBroker-iOS";
+			productName = MessageBroker;
+			productReference = DA1B71E919B6B27400933BAF /* MessageBroker.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DA1B71F219B6B27400933BAF /* MessageBroker-iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA1B71FC19B6B27400933BAF /* Build configuration list for PBXNativeTarget "MessageBroker-iOSTests" */;
+			buildPhases = (
+				DA1B71EF19B6B27400933BAF /* Sources */,
+				DA1B71F019B6B27400933BAF /* Frameworks */,
+				DA1B71F119B6B27400933BAF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DA1B720019B6B2B200933BAF /* PBXTargetDependency */,
+			);
+			name = "MessageBroker-iOSTests";
+			productName = MessageBrokerTests;
+			productReference = DA1B71F319B6B27400933BAF /* MessageBroker-iOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -154,6 +233,12 @@
 					DA1B71D319B6B03E00933BAF = {
 						CreatedOnToolsVersion = 6.0;
 					};
+					DA1B71E819B6B27400933BAF = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					DA1B71F219B6B27400933BAF = {
+						CreatedOnToolsVersion = 6.0;
+					};
 				};
 			};
 			buildConfigurationList = DA1B71C319B6B03D00933BAF /* Build configuration list for PBXProject "MessageBroker" */;
@@ -168,8 +253,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DA1B71C819B6B03D00933BAF /* MessageBroker */,
-				DA1B71D319B6B03E00933BAF /* MessageBrokerTests */,
+				DA1B71C819B6B03D00933BAF /* MessageBroker-Mac */,
+				DA1B71D319B6B03E00933BAF /* MessageBroker-MacTests */,
+				DA1B71E819B6B27400933BAF /* MessageBroker-iOS */,
+				DA1B71F219B6B27400933BAF /* MessageBroker-iOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -183,6 +270,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		DA1B71D219B6B03E00933BAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA1B71E719B6B27400933BAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA1B71F119B6B27400933BAF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -207,7 +308,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DA1B71E419B6B27400933BAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA1B71EF19B6B27400933BAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DA1B71E319B6B21200933BAF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DA1B71C819B6B03D00933BAF /* MessageBroker-Mac */;
+			targetProxy = DA1B71E219B6B21200933BAF /* PBXContainerItemProxy */;
+		};
+		DA1B720019B6B2B200933BAF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DA1B71E819B6B27400933BAF /* MessageBroker-iOS */;
+			targetProxy = DA1B71FF19B6B2B200933BAF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		DA1B71DA19B6B03E00933BAF /* Debug */ = {
@@ -303,7 +431,7 @@
 				INFOPLIST_FILE = MessageBroker/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MessageBroker;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -320,7 +448,7 @@
 				INFOPLIST_FILE = MessageBroker/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MessageBroker;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -357,6 +485,84 @@
 			};
 			name = Release;
 		};
+		DA1B71FA19B6B27400933BAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MessageBroker/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = MessageBroker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DA1B71FB19B6B27400933BAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = MessageBroker/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = MessageBroker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DA1B71FD19B6B27400933BAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MessageBrokerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DA1B71FE19B6B27400933BAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MessageBrokerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -369,21 +575,41 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DA1B71DC19B6B03E00933BAF /* Build configuration list for PBXNativeTarget "MessageBroker" */ = {
+		DA1B71DC19B6B03E00933BAF /* Build configuration list for PBXNativeTarget "MessageBroker-Mac" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DA1B71DD19B6B03E00933BAF /* Debug */,
 				DA1B71DE19B6B03E00933BAF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		DA1B71DF19B6B03E00933BAF /* Build configuration list for PBXNativeTarget "MessageBrokerTests" */ = {
+		DA1B71DF19B6B03E00933BAF /* Build configuration list for PBXNativeTarget "MessageBroker-MacTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DA1B71E019B6B03E00933BAF /* Debug */,
 				DA1B71E119B6B03E00933BAF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA1B71F919B6B27400933BAF /* Build configuration list for PBXNativeTarget "MessageBroker-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA1B71FA19B6B27400933BAF /* Debug */,
+				DA1B71FB19B6B27400933BAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA1B71FC19B6B27400933BAF /* Build configuration list for PBXNativeTarget "MessageBroker-iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA1B71FD19B6B27400933BAF /* Debug */,
+				DA1B71FE19B6B27400933BAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 CocoaFlow. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for MessageBroker.
 FOUNDATION_EXPORT double MessageBrokerVersionNumber;
@@ -15,5 +15,3 @@ FOUNDATION_EXPORT double MessageBrokerVersionNumber;
 FOUNDATION_EXPORT const unsigned char MessageBrokerVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <MessageBroker/PublicHeader.h>
-
-
