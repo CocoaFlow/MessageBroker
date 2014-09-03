@@ -39,9 +39,9 @@ class MessageBrokerSpec: QuickSpec {
                     
                     messageBroker.receive(brokerChannel, brokerTopic, JSON.parse(brokerPayload).value!)
                     
-                    expect(receiverChannel).toEventually(equal(brokerChannel))
-                    expect(receiverTopic).toEventually(equal(brokerTopic))
-                    expect(receiverPayload).toEventually(equal(JSON.parse(brokerPayload).value))
+                    expect(receiverChannel).to(equal(brokerChannel))
+                    expect(receiverTopic).to(equal(brokerTopic))
+                    expect(receiverPayload).to(equal(JSON.parse(brokerPayload).value))
                 }
             }
             
@@ -66,9 +66,9 @@ class MessageBrokerSpec: QuickSpec {
                     
                     messageBroker.send(brokerChannel, brokerTopic, JSON.parse(brokerPayload).value!)
                     
-                    expect(receiverChannel).toEventually(equal(brokerChannel))
-                    expect(receiverTopic).toEventually(equal(brokerTopic))
-                    expect(receiverPayload).toEventually(equal(JSON.parse(brokerPayload).value))
+                    expect(receiverChannel).to(equal(brokerChannel))
+                    expect(receiverTopic).to(equal(brokerTopic))
+                    expect(receiverPayload).to(equal(JSON.parse(brokerPayload).value))
                 }
             }
         }
