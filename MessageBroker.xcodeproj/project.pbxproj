@@ -16,6 +16,8 @@
 		DA67110719B6C2F700A4B369 /* MessageTransfer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA6710FF19B6C2DB00A4B369 /* MessageTransfer.framework */; };
 		DA67110919B6C33B00A4B369 /* MessageBroker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA67110819B6C33B00A4B369 /* MessageBroker.swift */; };
 		DA67110A19B6C33B00A4B369 /* MessageBroker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA67110819B6C33B00A4B369 /* MessageBroker.swift */; };
+		DAF793D219B6CA42005B527E /* MessageBrokerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF793D119B6CA42005B527E /* MessageBrokerSpec.swift */; };
+		DAF793D319B6CA42005B527E /* MessageBrokerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF793D119B6CA42005B527E /* MessageBrokerSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +133,7 @@
 		DA6710E319B6C22200A4B369 /* Nimble.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Nimble.xcodeproj; path = External/Nimble/Nimble.xcodeproj; sourceTree = SOURCE_ROOT; };
 		DA6710F619B6C2DB00A4B369 /* MessageTransfer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MessageTransfer.xcodeproj; path = External/MessageTransfer/MessageTransfer.xcodeproj; sourceTree = SOURCE_ROOT; };
 		DA67110819B6C33B00A4B369 /* MessageBroker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageBroker.swift; sourceTree = "<group>"; };
+		DAF793D119B6CA42005B527E /* MessageBrokerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageBrokerSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +219,7 @@
 				DA6710E319B6C22200A4B369 /* Nimble.xcodeproj */,
 				DA6710D319B6C20900A4B369 /* Quick.xcodeproj */,
 				DA1B71D619B6B03E00933BAF /* Supporting Files */,
+				DAF793D119B6CA42005B527E /* MessageBrokerSpec.swift */,
 			);
 			path = MessageBrokerTests;
 			sourceTree = "<group>";
@@ -534,6 +538,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA67110919B6C33B00A4B369 /* MessageBroker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -541,7 +546,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA67110919B6C33B00A4B369 /* MessageBroker.swift in Sources */,
+				DAF793D219B6CA42005B527E /* MessageBrokerSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -549,6 +554,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA67110A19B6C33B00A4B369 /* MessageBroker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,7 +562,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA67110A19B6C33B00A4B369 /* MessageBroker.swift in Sources */,
+				DAF793D319B6CA42005B527E /* MessageBrokerSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
