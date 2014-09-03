@@ -55,7 +55,7 @@ class MessageBrokerSpec: QuickSpec {
         
         describe("Message broker") {
             
-            describe("when receiving a message") {
+            describe("receiving a message") {
                 
                 it("should forward the message to the message receiver") {
                     let messageBroker = MessageBroker()
@@ -82,7 +82,7 @@ class MessageBrokerSpec: QuickSpec {
                 }
             }
             
-            describe("when sending a message") {
+            describe("sending a message") {
                 
                 it("should forward the message to the message sender") {
                     let messageBroker = MessageBroker()
