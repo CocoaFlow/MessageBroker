@@ -10,44 +10,7 @@ import Foundation
 import Quick
 import Nimble
 import MessageBroker
-import MessageTransfer
 import JSONLib
-
-struct FakeMessageReceiver: MessageReceiverWorkaround {
-    
-    typealias Verification = (channel: String, topic: String, payload: JSON) -> Void
-    
-    private let verify: Verification
-    var messageSender: MessageSender?
-    
-    init(var _ messageSender: MessageSenderWorkaround, _ verify: Verification = { (channel, topic, payload) in }) {
-        self.messageSender = messageSender
-        self.verify = verify
-        messageSender.messageReceiver = self
-    }
-    
-    func receive(channel: String, _ topic: String, _ payload: JSON) {
-        self.verify(channel: channel, topic: topic, payload: payload)
-    }
-}
-
-struct FakeMessageSender: MessageSenderWorkaround {
-    
-    typealias Verification = (channel: String, topic: String, payload: JSON) -> Void
-    
-    private let verify: Verification
-    var messageReceiver: MessageReceiver?
-    
-    init(var _ messageReceiver: MessageReceiverWorkaround, _ verify: Verification = { (channel, topic, payload) in }) {
-        self.messageReceiver = messageReceiver
-        self.verify = verify
-        messageReceiver.messageSender = self
-    }
-    
-    func send(channel: String, _ topic: String, _ payload: JSON) {
-        self.verify(channel: channel, topic: topic, payload: payload)
-    }
-}
 
 class MessageBrokerSpec: QuickSpec {
     
