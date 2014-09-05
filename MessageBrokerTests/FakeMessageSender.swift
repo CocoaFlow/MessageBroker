@@ -10,14 +10,14 @@ import Foundation
 import MessageTransfer
 import JSONLib
 
-struct FakeMessageSender: MessageSenderWorkaround {
+struct FakeMessageSender: MessageSenderWithReceiver {
     
     typealias Verification = (channel: String, topic: String, payload: JSON) -> Void
     
     private let verify: Verification
     var messageReceiver: MessageReceiver?
     
-    init(var _ messageReceiver: MessageReceiverWorkaround, _ verify: Verification = { (channel, topic, payload) in }) {
+    init(var _ messageReceiver: MessageReceiverWithSender, _ verify: Verification = { (channel, topic, payload) in }) {
         self.messageReceiver = messageReceiver
         self.verify = verify
         messageReceiver.messageSender = self
