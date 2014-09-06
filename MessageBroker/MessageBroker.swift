@@ -10,7 +10,7 @@ import Foundation
 import MessageTransfer
 import JSONLib
 
-public final class MessageBroker: MessageSenderWithReceiver, MessageReceiverWithSender {
+final public class MessageBroker: MessageSenderWithReceiver, MessageReceiverWithSender {
     
     public var messageSender: MessageSender?
     public var messageReceiver: MessageReceiver?
