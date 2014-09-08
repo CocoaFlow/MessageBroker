@@ -20,55 +20,115 @@ class MessageBrokerSpec: QuickSpec {
             
             describe("receiving a message") {
                 
-                it("should forward the message to the message receiver") {
-                    let messageBroker = MessageBroker()
+                context("without a payload") {
                     
-                    let brokerChannel = "channel"
-                    let brokerTopic = "topic"
-                    let brokerPayload = "{\"key\":\"value\"}"
-                    
-                    var receiverChannel: String!
-                    var receiverTopic: String!
-                    var receiverPayload: JSON!
-                    
-                    let messageReceiver = FakeMessageReceiver(messageBroker) { (channel, topic, payload) in
-                        receiverChannel = channel
-                        receiverTopic = topic
-                        receiverPayload = payload
+                    it("should forward the message to the message receiver") {
+                        let messageBroker = MessageBroker()
+                        
+                        let brokerChannel = "channel"
+                        let brokerTopic = "topic"
+                        let brokerPayload: JSON? = nil
+                        
+                        var receiverChannel: String!
+                        var receiverTopic: String!
+                        var receiverPayload: JSON?
+                        
+                        let messageReceiver = FakeMessageReceiver(messageBroker) { (channel, topic, payload) in
+                            receiverChannel = channel
+                            receiverTopic = topic
+                            receiverPayload = payload
+                        }
+                        
+                        messageBroker.receive(brokerChannel, brokerTopic, brokerPayload)
+                        
+                        expect(receiverChannel).to(equal(brokerChannel))
+                        expect(receiverTopic).to(equal(brokerTopic))
+                        expect(receiverPayload).to(beNil())
                     }
+                }
+                
+                context("with a payload") {
                     
-                    messageBroker.receive(brokerChannel, brokerTopic, JSON.parse(brokerPayload).value!)
-                    
-                    expect(receiverChannel).to(equal(brokerChannel))
-                    expect(receiverTopic).to(equal(brokerTopic))
-                    expect(receiverPayload).to(equal(JSON.parse(brokerPayload).value))
+                    it("should forward the message to the message receiver") {
+                        let messageBroker = MessageBroker()
+                        
+                        let brokerChannel = "channel"
+                        let brokerTopic = "topic"
+                        let brokerPayload = "{\"key\":\"value\"}"
+                        
+                        var receiverChannel: String!
+                        var receiverTopic: String!
+                        var receiverPayload: JSON?
+                        
+                        let messageReceiver = FakeMessageReceiver(messageBroker) { (channel, topic, payload) in
+                            receiverChannel = channel
+                            receiverTopic = topic
+                            receiverPayload = payload
+                        }
+                        
+                        messageBroker.receive(brokerChannel, brokerTopic, JSON.parse(brokerPayload).value!)
+                        
+                        expect(receiverChannel).to(equal(brokerChannel))
+                        expect(receiverTopic).to(equal(brokerTopic))
+                        expect(receiverPayload).to(equal(JSON.parse(brokerPayload).value))
+                    }
                 }
             }
             
             describe("sending a message") {
                 
-                it("should forward the message to the message sender") {
-                    let messageBroker = MessageBroker()
+                context("without a payload") {
                     
-                    let brokerChannel = "channel"
-                    let brokerTopic = "topic"
-                    let brokerPayload = "{\"key\":\"value\"}"
-                    
-                    var senderChannel: String!
-                    var senderTopic: String!
-                    var senderPayload: JSON!
-                    
-                    let messageSender = FakeMessageSender(messageBroker) { (channel, topic, payload) in
-                        senderChannel = channel
-                        senderTopic = topic
-                        senderPayload = payload
+                    it("should forward the message to the message sender") {
+                        let messageBroker = MessageBroker()
+                        
+                        let brokerChannel = "channel"
+                        let brokerTopic = "topic"
+                        let brokerPayload: JSON? = nil
+                        
+                        var senderChannel: String!
+                        var senderTopic: String!
+                        var senderPayload: JSON?
+                        
+                        let messageSender = FakeMessageSender(messageBroker) { (channel, topic, payload) in
+                            senderChannel = channel
+                            senderTopic = topic
+                            senderPayload = payload
+                        }
+                        
+                        messageBroker.send(brokerChannel, brokerTopic, brokerPayload)
+                        
+                        expect(senderChannel).to(equal(brokerChannel))
+                        expect(senderTopic).to(equal(brokerTopic))
+                        expect(senderPayload).to(beNil())
                     }
+                }
+                
+                context("with a payload") {
                     
-                    messageBroker.send(brokerChannel, brokerTopic, JSON.parse(brokerPayload).value!)
-                    
-                    expect(senderChannel).to(equal(brokerChannel))
-                    expect(senderTopic).to(equal(brokerTopic))
-                    expect(senderPayload).to(equal(JSON.parse(brokerPayload).value))
+                    it("should forward the message to the message sender") {
+                        let messageBroker = MessageBroker()
+                        
+                        let brokerChannel = "channel"
+                        let brokerTopic = "topic"
+                        let brokerPayload = "{\"key\":\"value\"}"
+                        
+                        var senderChannel: String!
+                        var senderTopic: String!
+                        var senderPayload: JSON?
+                        
+                        let messageSender = FakeMessageSender(messageBroker) { (channel, topic, payload) in
+                            senderChannel = channel
+                            senderTopic = topic
+                            senderPayload = payload
+                        }
+                        
+                        messageBroker.send(brokerChannel, brokerTopic, JSON.parse(brokerPayload).value!)
+                        
+                        expect(senderChannel).to(equal(brokerChannel))
+                        expect(senderTopic).to(equal(brokerTopic))
+                        expect(senderPayload).to(equal(JSON.parse(brokerPayload).value))
+                    }
                 }
             }
         }
