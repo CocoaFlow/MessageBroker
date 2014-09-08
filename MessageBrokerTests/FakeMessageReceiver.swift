@@ -12,7 +12,7 @@ import JSONLib
 
 struct FakeMessageReceiver: MessageReceiverWithSender {
     
-    typealias Verification = (channel: String, topic: String, payload: JSON) -> Void
+    typealias Verification = (channel: String, topic: String, payload: JSON?) -> Void
     
     private let verify: Verification
     var messageSender: MessageSender?
@@ -23,7 +23,7 @@ struct FakeMessageReceiver: MessageReceiverWithSender {
         messageSender.messageReceiver = self
     }
     
-    func receive(channel: String, _ topic: String, _ payload: JSON) {
+    func receive(channel: String, _ topic: String, _ payload: JSON?) {
         self.verify(channel: channel, topic: topic, payload: payload)
     }
 }
