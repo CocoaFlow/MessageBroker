@@ -17,13 +17,13 @@ final public class MessageBroker: MessageSenderWithReceiver, MessageReceiverWith
     
     public init() {}
     
-    public func send(channel: String, _ topic: String, _ payload: JSON) {
+    public func send(channel: String, _ topic: String, _ payload: JSON?) {
         if let maybeMessageSender = self.messageSender {
             maybeMessageSender.send(channel, topic, payload)
         }
     }
     
-    public func receive(channel: String, _ topic: String, _ payload: JSON) {
+    public func receive(channel: String, _ topic: String, _ payload: JSON?) {
         if let maybeMessageReceiver = self.messageReceiver {
             maybeMessageReceiver.receive(channel, topic, payload)
         }
