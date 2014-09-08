@@ -54,21 +54,21 @@ class MessageBrokerSpec: QuickSpec {
                     let brokerTopic = "topic"
                     let brokerPayload = "{\"key\":\"value\"}"
                     
-                    var receiverChannel: String!
-                    var receiverTopic: String!
-                    var receiverPayload: JSON!
+                    var senderChannel: String!
+                    var senderTopic: String!
+                    var senderPayload: JSON!
                     
-                    let messageReceiver = FakeMessageSender(messageBroker) { (channel, topic, payload) in
-                        receiverChannel = channel
-                        receiverTopic = topic
-                        receiverPayload = payload
+                    let messageSender = FakeMessageSender(messageBroker) { (channel, topic, payload) in
+                        senderChannel = channel
+                        senderTopic = topic
+                        senderPayload = payload
                     }
                     
                     messageBroker.send(brokerChannel, brokerTopic, JSON.parse(brokerPayload).value!)
                     
-                    expect(receiverChannel).to(equal(brokerChannel))
-                    expect(receiverTopic).to(equal(brokerTopic))
-                    expect(receiverPayload).to(equal(JSON.parse(brokerPayload).value))
+                    expect(senderChannel).to(equal(brokerChannel))
+                    expect(senderTopic).to(equal(brokerTopic))
+                    expect(senderPayload).to(equal(JSON.parse(brokerPayload).value))
                 }
             }
         }
